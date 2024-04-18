@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jquery Mobile</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    .login{
+     width: 300px;
+     height: 200px;
+     border: 1px black solid;
+    }
+  </style>
+</head>
+<body>
+
+  <div data-role="page">
+
+    <div data-role="header" data-theme="b">
+     <h1>PICT Pune</h1>
+    </div>
+
+    <div data-role="navbar" data-grid="c">
+     <ul>
+      <li><a href="index.html" class="ui-btn-active">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="login.html">Register</a></li>
+
+     </ul>
+    </div>
+
+   <center><h3>PRODUCTS</h3></center>
+
+   <div class="content">
+    <center>
+     <h3>Login</h3>
+     <div data-role="content" class="login">
+      <label for="emailId">Email Id</label>
+      <input type="email" name="emailId" id="emailId">
+      <label for="password">PassWord</label>
+      <input type="password" name="password" id="password">
+      <input type="submit" value="Submit" onclick="alert('Validating')">
+     </div>
+    </center>
+   </div>
+   <br>
+    <div data-role="footer" data-theme="b">
+     <center>
+      <h3>Quick Links</h3>
+      <a href="#">L1</a><br>
+      <a href="#">L2</a><br>
+      <a href="#">L3</a><br>
+      <a href="#">L4</a><br>
+
+      <p>All Rights Recieved</p>
+     </center>
+    </div>
+  </div>
+</body>
+</html>

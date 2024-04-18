@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data List</title>
+</head>
+<body>
+  <h1>User Data List</h1>
+  <div id="userDataContainer"></div>
+
+  <script>
+    // Retrieve user data from local storage
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    // Display user data
+    if (userData) {
+      const userDataContainer = document.getElementById('userDataContainer');
+      userDataContainer.innerHTML = `
+        <p><strong>Username:</strong> ${userData.username}</p>
+        <p><strong>Email:</strong> ${userData.email}</p>
+        <p><strong>Password:</strong> ${userData.password}</p>
+      `;
+    } else {
+      // Handle case where no user data is found
+      userDataContainer.innerHTML = '<p>No user data found.</p>';
+    }
+  </script>
+</body>
+</html>
