@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    .head_div{
+      background-color: rgb(16, 16, 105);
+      height: 100px;
+      display: flex;
+    }
+    .face_text{
+      color: white;
+      font-size: 60px;
+      font-weight: 800;
+      height: fit-content;
+      width: fit-content;
+      margin-left: 140px;
+      padding-top: 10px;
+    }
+    .side_form{
+      height: fit-content;
+      width: fit-content;
+      display: flex;
+      margin-left:450px;
+      margin-top: 20px;
+    }
+    .email_div{
+      color: white;
+    }
+    .pass_div{
+      color: white;
+      margin-left: 10px;
+    }
+    #myl{
+      text-decoration: none;
+      color: white;
+    }
+    #btn{
+      width: 80px;
+      height: 30px;
+      margin-top: 15px;
+      margin-left: 20px;
+    }
+    .body_div{
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+    }
+    .side_form_body{
+      margin-left: 280px;
+      margin-top: 20px;
+      color:rgb(16, 16, 105);
+      font-weight: bold;
+    }
+    .side_image{
+    margin-left: 30px;
+    margin-top: 20px;
+    }
+    .inp{
+      width: 250px;
+      height: 30px;
+      border-radius: 10px;
+    }
+    .gen_div{
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .su_btn{
+      background-color: rgb(13, 156, 13);
+      color: white;
+      width: 100px;
+      height: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="head_div">
+   <div class="face_text">
+    facebook
+   </div>
+   <div class="side_form">
+    <div class="email_div">
+      <label for="email">Email or username</label>
+      <br>
+      <input type="email" placeholder="Email">
+      <br>
+      <input type="radio">
+      <label for="">Keep me logged in</label>
+    </div>
+    <div class="pass_div">
+      <label for="pass">Password</label>
+      <br>
+      <input type="password" placeholder="Password">
+      <br>
+      <a href="#" id="myl">Forgotten my Password</a>
+    </div>
+    <input type="submit" value="login" id="btn">
+  </div>
+  </div>
+
+  
+  <div class="body_div">
+    <div class="side_image">
+     <h1 style="color: rgb(16, 16, 105);">Facebook is useless without friedns</h1>
+     <h1 style="color: rgb(16, 16, 105);">Make more frieds</h1>
+     <img src="pb.PNG" alt="">
+    </div>
+    <div class="side_form_body">
+     <h1>Create an acount</h1>
+     <h3>Its free and always will be</h3>
+     <input type="text" placeholder="First name" class="inp">
+     <input type="text" placeholder="Last name" class="inp">
+     <br>
+     <input type="email" placeholder="Email" class="inp">
+     <br>
+     <input type="email" placeholder="Reenter Email" class="inp">
+     <br>
+     <input type="password" placeholder="Password" class="inp">
+     <br>
+     <input type="date" class="inp">
+     <br>
+     <div class="gen_div">
+     <input type="radio"> Male <input type="radio"> Female
+    </div>
+     <h3>By clicking sing in you agree our terms</h3>
+     <button class="su_btn">Sign Up</button>
+     <hr>
+     <h3>Create a page for you</h3>
+    </div>
+  </div>
+</body>
+</html>
