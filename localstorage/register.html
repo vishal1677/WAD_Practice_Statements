@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bdy">
+        <div class="register" id="reg">
+            <h1>New To Platform !<br>Register Here!</h1>
+            <form class="regform">
+                <label >Name:</label>
+                <input type="text" id="name" name="Name" placeholder="Enter Name">
+                <br>
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Email">
+                <br>
+                <label>Password:</label>
+                <input type="password" id="password1"  placeholder="Password">
+                <br>
+                <button (click)="onRegister()">Sign Up</button>
+            </form>
+        </div>
+        <div class="login" id="logiin">
+            <h1>Already have an account Login !</h1>
+            <form class="loginform">
+                <label>Email:</label>
+                <input type="email" id="email2" placeholder="Email">
+                <br>
+                <label>Password:</label>
+                <input type="password" id="password2" placeholder="Password">
+                <br>
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script>
+        const reg = document.getElementById('reg');
+        reg.addEventListener('submit' , (e) =>{
+            e.preventDefault();
+            alert('Trying to Register !')
+            const name = document.getElementById('name').value
+            const email = document.getElementById('email').value
+            const password1 = document.getElementById('password1').value
+
+            console.log(`${name}, ${email}, ${password1}`)
+
+            let user_data = new Array();
+            // user_data = JSON.parse(localStorage.getItem('W-4'))?JSON.parse(localStorage.getItem("W-4")):[];
+            user_data = JSON.parse(localStorage.getItem('W-4')) ? JSON.parse(localStorage.getItem('W-4')) : [];
+
+            if(user_data.some((v)=>{
+                v.email = email
+            })){
+                alert('Email already present try logging in !')
+            }
+            else{
+                user_data.push({
+                    "name": name,
+                    "email": email,
+                    "password": password1
+                })
+
+                console.log(user_data)
+                localStorage.setItem('W-4',JSON.stringify(user_data));
+                alert('User added successfully!')
+            }
+
+        })
+
+        const logiin = document.getElementById('logiin');
+        logiin.addEventListener('submit' , (e) =>{
+            e.preventDefault()
+            alert('Trying to login !')
+            const email2 = document.getElementById('email2').value
+            const password2 = document.getElementById('password2').value
+
+            console.log(`${email2} , ${password2}`)
+
+            let stored_user = JSON.parse(localStorage.getItem('W-4')) ? JSON.parse(localStorage.getItem('W-4')):[]
+
+            // if(stored_user.some(v => {
+            //     v.email === email2 && v.password === password2 
+            // })){
+            //     alert('User Found !!!')
+            //     localStorage.setItem('w-4_current',JSON.stringify({
+            //         "name":v.name,
+            //         "email":v.email,
+            //         "password":v.password
+            //     }))
+            //     window.location.href = "profile.html";
+            // }
+            // else{
+            //     alert('Not Found !')
+            // }
+
+            // if(stored_user.some(v => 
+            //     v.email === email2 && v.password === password2 
+            // )){
+            //     alert('User Found !!!')
+            //     localStorage.setItem('w-4_current',JSON.stringify({
+            //         "name":v.name,
+            //         "email":v.email,
+            //         "password":v.password
+            //     }))
+            //     window.location.href = "profile.html";
+            // }
+            // else{
+            //     alert('Not Found !')
+            // }
+
+
+            if(stored_user.some(v => 
+                v.email === email2 && v.password === password2 
+            )){
+                alert('User Found !!!')
+                // Accessing v here is not valid, as v is scoped within the callback function of some()
+                // Instead, find the matching user and store it
+                const matchedUser = stored_user.find(user => user.email === email2 && user.password === password2);
+                localStorage.setItem('w-4_current', JSON.stringify(matchedUser));
+                window.location.href = "profile.html";
+            }
+            else{
+                alert('Not Found !')
+            }
+
+        })
+
+    </script>
+</body>
+</html>

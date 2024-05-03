@@ -1,0 +1,71 @@
+.bdy{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.register{
+    width: 50vw;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    font-size: 35px;
+}
+
+
+.regform {
+    font-size: 35px;
+}
+
+.regform input{
+    padding: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.regform button{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+.regform button:hover{
+    background-color: #fff;
+}
+
+.login{
+    width: 50vw;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    font-size: 35px;
+}
+
+
+.loginform {
+    font-size: 35px;
+}
+
+.loginform input{
+    padding: 15px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.loginform button{
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+.loginform button:hover{
+    background-color: #fff;
+}
