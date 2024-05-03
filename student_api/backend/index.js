@@ -15,7 +15,7 @@ app.get('/',(req,res)=>{
 res.send('Hello from node server');
 });
 
-mongoose.connect('mongodb+srv://vishalpatil:vishal123@cluster0.sm72w2k.mongodb.net/student_database').then(()=>{
+mongoose.connect('ABC').then(()=>{
 console.log('Connected to db !');
 app.listen(3000,()=>{
   console.log('Server is running on port 3000');
